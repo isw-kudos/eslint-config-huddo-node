@@ -5,5 +5,5 @@ huddo eslint config for node services
 
 ```
   extends:
-    - huddo-node
+    - @huddo/eslint-config-node
 ```
