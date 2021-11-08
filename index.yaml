@@ -1,0 +1,17 @@
+extends:
+  - prettier
+env:
+  node: true
+  es6: true
+parser: "@babel/eslint-parser"
+plugins:
+  - prettier
+rules:
+  class-methods-use-this: 1
+  arrow-body-style:
+    - error
+    - as-needed
+  prettier/prettier:
+    - 2
+    - singleQuote: true
+      trailingComma: es5
