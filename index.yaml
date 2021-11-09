@@ -1,17 +1,159 @@
 extends:
+  - eslint:recommended
   - prettier
+  - "plugin:import/errors"
+  - "plugin:import/warnings"
+  - "plugin:you-dont-need-lodash-underscore/compatible"
 env:
   node: true
   es6: true
+  commonjs: true
+  jest: true
 parser: "@babel/eslint-parser"
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+  ecmaFeatures:
+    impliedStrict: true
+    modules: true
 plugins:
   - prettier
+  - lodash
+  - import
 rules:
-  class-methods-use-this: 1
+  array-callback-return: 2
   arrow-body-style:
     - error
     - as-needed
-  prettier/prettier:
+  class-methods-use-this: 0
+  dot-notation: 2
+  eqeqeq: 2
+  import/no-amd: 2
+  import/no-commonjs: 1
+  import/no-duplicates: 2
+  import/no-extraneous-dependencies: 2
+  import/no-mutable-exports: 2
+  import/no-namespace: 1
+  import/no-nodejs-modules: 0
+  import/order:
+    - error
+    - newlines-between: always
+      groups:
+        - builtin
+        - external
+        - - parent
+          - sibling
+        - index
+      alphabetize:
+        order: asc
+        caseInsensitive: true
+  import/prefer-default-export: 0
+  linebreak-style:
+    - error
+    - unix
+  lodash/chaining:
+    - error
+    - never
+  lodash/import-scope:
+    - error
+    - method
+  max-len:
+    - 1
+    - tabWidth: 2
+      ignoreComments: true
+      ignoreStrings: true
+      ignoreUrls: true
+  no-alert: 0
+  no-console: 0
+  no-continue: 0
+  no-constant-condition:
     - 2
+    - checkLoops: false
+  no-duplicate-imports: 2
+  no-empty-class: 0
+  no-empty-function: 2
+  no-else-return: 2
+  no-eval: 2
+  no-extend-native: 2
+  no-extra-bind: 2
+  no-global-assign: 2
+  no-implicit-globals: 2
+  no-implied-eval: 2
+  no-invalid-this: 1
+  no-lonely-if: 2
+  no-loop-func: 2
+  no-multi-spaces: 2
+  no-new: 2
+  no-new-func: 2
+  no-new-wrappers: 2
+  no-plusplus:
+  - error
+  - allowForLoopAfterthoughts: true
+  no-proto: 2
+  no-prototype-builtins: 0
+  no-script-url: 2
+  no-self-compare: 2
+  no-throw-literal: 2
+  no-underscore-dangle: 0
+  no-unmodified-loop-condition: 2
+  no-unneeded-ternary:
+    - 2
+    - defaultAssignment: false
+  no-unsafe-negation: 2
+  no-unused-expressions: 0
+  no-unused-vars:
+    - error
+    - args: none
+  no-use-before-define:
+    - warn
+    - nofunc
+  no-useless-call: 2
+  no-useless-computed-key: 2
+  no-useless-concat: 2
+  no-useless-constructor: 2
+  no-useless-rename: 2
+  no-var: 2
+  no-with: 2
+  object-shorthand: 2
+  operator-assignment: 2
+  prefer-arrow-callback: 2
+  prefer-const: 2
+  prefer-rest-params: 2
+  prefer-spread: 2
+  prettier/prettier:
+    - error
     - singleQuote: true
       trailingComma: es5
+  quotes:
+    - warn
+    - single
+    - avoidEscape: true
+  space-in-parens:
+    - error
+    - never
+  you-dont-need-lodash-underscore/omit: warn
+  you-dont-need-lodash-underscore/flatten: off
+  you-dont-need-lodash-underscore/throttle: off
+  you-dont-need-lodash-underscore/uniq: off
+
+globals:
+  Modernizr: true
+  __TESTING__: true
+  beforeEach: true
+  expect: true
+  describe: true
+  it: true
+  element: true
+  by: true
+  browser: true
+  inject: true
+  register: true
+  sinon: true
+settings:
+  import/resolver:
+    node:
+      moduleDirectory:
+        - node_modules
+        - src/
+      extensions:
+        - .js

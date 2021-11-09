@@ -1,6 +1,6 @@
 {
   "name": "@huddo/eslint-config-node",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "huddo eslint config for node services",
   "main": "index.json",
   "scripts": {
@@ -9,21 +9,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isw-kudos/eslint-config-huddo-node.git"
+    "url": "git+https://github.com/isw-kudos/eslint-config-node.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/isw-kudos/eslint-config-huddo-node/issues"
+    "url": "https://github.com/isw-kudos/eslint-config-node/issues"
   },
-  "homepage": "https://github.com/isw-kudos/eslint-config-huddo-node#readme",
+  "homepage": "https://github.com/isw-kudos/eslint-config-node#readme",
   "dependencies": {
-    "@babel/eslint-parser": "^7.16.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0"
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-lodash": "^7.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.11.0"
   },
   "devDependencies": {
     "js-yaml": "^4.1.0"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.0",
+    "eslint": ">=7",
+    "prettier": ">=2"
   }
 }
