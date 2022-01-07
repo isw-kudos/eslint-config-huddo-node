@@ -1,6 +1,6 @@
 {
   "name": "@huddo/eslint-config-node",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "huddo eslint config for node services",
   "main": "index.json",
   "scripts": {

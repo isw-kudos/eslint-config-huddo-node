@@ -7,3 +7,30 @@ huddo eslint config for node services
   extends:
     - @huddo/eslint-config-node
 ```
+
+## Getting Started
+
+1. Install dependencies
+
+    ```
+    yarn
+    ```
+
+1. Login to NPM
+
+    ```
+    npm adduser
+    ```
+
+## Deploy to NPM
+
+Build `index.json` and publish to npm
+
+```
+yarn run prepare
+npm publish
+```
+
+## Changelog
+
+- 1.1.0 - Rules for async/await

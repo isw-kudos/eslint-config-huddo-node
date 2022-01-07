@@ -64,6 +64,7 @@ rules:
       ignoreStrings: true
       ignoreUrls: true
   no-alert: 0
+  no-await-in-loop: 1
   no-console: 0
   no-continue: 0
   no-constant-condition:
@@ -91,6 +92,7 @@ rules:
   - allowForLoopAfterthoughts: true
   no-proto: 2
   no-prototype-builtins: 0
+  no-return-await: 1
   no-script-url: 2
   no-self-compare: 2
   no-throw-literal: 2
@@ -128,6 +130,7 @@ rules:
     - warn
     - single
     - avoidEscape: true
+  require-await: 2
   space-in-parens:
     - error
     - never
