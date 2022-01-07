@@ -22,8 +22,11 @@ huddo eslint config for node services
     npm adduser
     ```
 
+
+
 ## Deploy to NPM
 
+Update the package.json version number
 Build `index.json` and publish to npm
 
 ```
