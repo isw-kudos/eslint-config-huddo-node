@@ -13,7 +13,7 @@ huddo eslint config for node services
 1. Install dependencies
 
     ```
-    yarn
+    npm i
     ```
 
 1. Login to NPM
@@ -30,10 +30,13 @@ Update the package.json version number
 Build `index.json` and publish to npm
 
 ```
-yarn run prepare
+npm run prepare
 npm publish
 ```
 
 ## Changelog
 
 - 1.1.0 - Rules for async/await
+- 2.0.0 - Major updatest to latest packages (Feb 22)
+- 2.1.0 - Updatest to latest packages, simplify with npm (Sep 23)
+
