@@ -57,12 +57,7 @@ rules:
   lodash/import-scope:
     - error
     - method
-  max-len:
-    - 1
-    - tabWidth: 2
-      ignoreComments: true
-      ignoreStrings: true
-      ignoreUrls: true
+  max-len: 0
   no-alert: 0
   no-await-in-loop: 1
   no-console: 0
